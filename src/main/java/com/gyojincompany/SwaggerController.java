@@ -28,9 +28,9 @@ import io.swagger.annotations.*;
         return "hello";
     }
 	
-		@ApiImplicitParams({
-	        @ApiImplicitParam(name = "x", value = "x 값", required = true, dataType = "int", paramType = "path")
-	        , @ApiImplicitParam(name = "y", value = "y 값", required = true, dataType = "int", paramType = "query")
+	@ApiImplicitParams({
+	    @ApiImplicitParam(name = "x", value = "x 값", required = true, dataType = "int", paramType = "path")
+	  , @ApiImplicitParam(name = "y", value = "y 값", required = true, dataType = "int", paramType = "query")
 	})
 	@GetMapping("/plus/{x}")
 	public int plus(@PathVariable int x, @RequestParam int y){
